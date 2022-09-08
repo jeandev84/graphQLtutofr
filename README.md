@@ -24,6 +24,7 @@ $ npm init -yes
   "name": "graphQLtutofr",
   "version": "1.0.0",
   "description": "- https://graphql.org/ - https://graphql.org/code/ - https://github.com/dotansimha/graphql-yoga (Conseiller) ``` Schema : Contract (Interface)",
+  "type": "module", TRES IMPORTANT A AJOUTER!!!!
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -38,8 +39,12 @@ $ npm init -yes
   "bugs": {
     "url": "https://github.com/jeandev84/graphQLtutofr/issues"
   },
-  "homepage": "https://github.com/jeandev84/graphQLtutofr#readme"
+  "homepage": "https://github.com/jeandev84/graphQLtutofr#readme",
+  "dependencies": {
+    "graphql-yoga": "^2.13.13"
+  }
 }
+
 
 
 Installation de GraphQL Yoga
@@ -49,3 +54,42 @@ https://github.com/prisma-labs/graphql-yoga
 ```
 
 
+2. Creer fichier src/index.js
+
+```
+
+import { GraphQLServer } from "graphql-yoga"
+
+// ... or using `require()`
+// const { GraphQLServer } = require('graphql-yoga')
+
+
+// Definir le schema de graphQL (Contract)
+// Notre contract ce que nous offrons a travers notre serveur graphQL
+// Type Query : une requette Query (GET)
+const typeDefs = `
+     type Query {
+         hello(name: String): String!
+     }
+`;
+
+// Implementation de notre contract
+const resolvers = {
+    Query: {
+        hello: (_, {name}) => `Hello ${name || 'World'}`,
+    },
+};
+
+
+// Server
+const server = new GraphQLServer({typeDefs, resolvers});
+
+server.start(() => console.log("Server is running on localhost:4000"));
+
+```
+
+
+3. Lunch Server 
+``` 
+$ node src/index.js
+```

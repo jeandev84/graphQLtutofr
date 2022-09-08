@@ -2,6 +2,7 @@
   "name": "graphQLtutofr",
   "version": "1.0.0",
   "description": "- https://graphql.org/ - https://graphql.org/code/ - https://github.com/dotansimha/graphql-yoga (Conseiller) ``` Schema : Contract (Interface)",
+  "type": "module",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
