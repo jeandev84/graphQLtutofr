@@ -4,14 +4,9 @@ import { GraphQLServer } from "graphql-yoga"
 // const { GraphQLServer } = require('graphql-yoga')
 
 
-// Definir le schema de graphQL (Contract)
-// Notre contract ce que nous offrons a travers notre serveur graphQL
-// Type Query : une requette Query (GET)
-const typeDefs = `
-     type Query {
-         hello(name: String): String!
-     }
-`;
+// Definition de schema (Contract)
+const typeDefs = "src/schema/schema.graphql";
+
 
 // Implementation de notre contract
 const resolvers = {
@@ -22,6 +17,9 @@ const resolvers = {
 
 
 // Server
-const server = new GraphQLServer({typeDefs, resolvers});
+const server = new GraphQLServer({
+    typeDefs,
+    resolvers
+});
 
 server.start(() => console.log("Server is running on localhost:4000"));
