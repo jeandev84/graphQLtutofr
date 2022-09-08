@@ -19,6 +19,6 @@
   },
   "homepage": "https://github.com/jeandev84/graphQLtutofr#readme",
   "dependencies": {
-    "graphql-yoga": "^2.13.13"
+    "graphql-yoga": "^1.18.3"
   }
 }

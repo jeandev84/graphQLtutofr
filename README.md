@@ -48,8 +48,8 @@ $ npm init -yes
 
 
 Installation de GraphQL Yoga
-$ npm i graphql-yoga
-
+$ npm i graphql-yoga (Depricated)
+$ npm i @graphql-yoga/node graphql
 https://github.com/prisma-labs/graphql-yoga
 ```
 
