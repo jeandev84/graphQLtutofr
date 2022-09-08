@@ -93,3 +93,46 @@ server.start(() => console.log("Server is running on localhost:4000"));
 ``` 
 $ node src/index.js
 ```
+
+
+4. Install nodemon (Relance le server a chaque modification pas besoin de raffraichir la page)
+- https://www.npmjs.com/package/nodemon
+
+```
+"nodemon": "^2.0.7"
+$ npm i nodemon || npm i nodemon@2.0.7
+
+Lunch server 
+$ npx nodemon src/index.js
+
+[nodemon] 2.0.7
+[nodemon] to restart at any time, enter `rs`
+[nodemon] watching path(s): *.*
+[nodemon] watching extensions: js,mjs,json
+[nodemon] starting `node src/index.js`
+Server is running on localhost:4000
+
+==================================================================== 
+
+{
+  ....
+  "scripts": {
+    "start": "nodemon src/index.js"
+  },
+  ....
+}
+
+$ npm run start
+
+
+> graphQLtutofr@1.0.0 start
+> nodemon src/index.js
+
+[nodemon] 2.0.7
+[nodemon] to restart at any time, enter `rs`
+[nodemon] watching path(s): *.*
+[nodemon] watching extensions: js,mjs,json
+[nodemon] starting `node src/index.js`
+Server is running on localhost:4000
+
+```
