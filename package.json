@@ -1,0 +1,23 @@
+{
+  "name": "graphQLtutofr",
+  "version": "1.0.0",
+  "description": "- https://graphql.org/ - https://graphql.org/code/ - https://github.com/dotansimha/graphql-yoga (Conseiller) ``` Schema : Contract (Interface)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jeandev84/graphQLtutofr.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jeandev84/graphQLtutofr/issues"
+  },
+  "homepage": "https://github.com/jeandev84/graphQLtutofr#readme",
+  "dependencies": {
+    "graphql-yoga": "^2.13.13"
+  }
+}
