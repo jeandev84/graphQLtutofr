@@ -1,4 +1,5 @@
 import { GraphQLServer } from "graphql-yoga"
+import {Query} from "./resolvers/Query.mjs";
 
 // ... or using `require()`
 // const { GraphQLServer } = require('graphql-yoga')
@@ -10,9 +11,7 @@ const typeDefs = "src/schema/schema.graphql";
 
 // Implementation de notre contract
 const resolvers = {
-    Query: {
-        hello: (_, {name}) => `Hello ${name || 'World'}`,
-    },
+    Query,
 };
 
 

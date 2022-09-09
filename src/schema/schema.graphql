@@ -6,13 +6,15 @@ enum TodoStatusEnum {
 }
 
 
-type todo {
+type Todo {
    id: ID!
    name: String!
    content: String!
    status: TodoStatusEnum!
 }
 
+
 type Query {
      hello(name: String): String!
+     getTodos: [Todo]!
 }
